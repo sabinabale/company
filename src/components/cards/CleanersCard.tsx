@@ -57,7 +57,7 @@ export default function CleanersCard() {
                 {card.cleaner.map((cleaner) => (
                   <button
                     key={cleaner.name}
-                    className="[ flex items-center gap-2.5 ] [ w-full px-5 py-5 ] [ text-left border-t bg-zinc-50 hover:bg-zinc-200 ] "
+                    className="[ flex items-center gap-2.5 ] [ w-full px-5 py-5 ] [ text-left border-t bg-zinc-50 hover:bg-zinc-100 ] "
                   >
                     <div className="w-8 h-8 rounded-full border border-zinc-300 flex items-center justify-center bg-zinc-200">
                       {getInitials(cleaner.name)}
