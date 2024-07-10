@@ -1,0 +1,71 @@
+export default function CleanerCard() {
+  const cardProps = [
+    {
+      title: "CONTACT INFORMATION",
+      cleaningDays: "Mon - Fri",
+      cleaningTime: "8PM - 9PM",
+      cleaner: [
+        {
+          name: "Marcus Miles Burnett",
+          phone: "+324 132 453 786",
+        },
+        {
+          name: "Michael Eugene Lowrey",
+          phone: "+324 122 983 782",
+        },
+      ],
+    },
+    {
+      title: "CONTACT INFORMATION",
+      cleaningDays: "Sat - Sun",
+      cleaningTime: "8PM - 9PM",
+      cleaner: [
+        {
+          name: "Sheldon Cooper",
+          phone: "+324 122 983 782",
+        },
+      ],
+    },
+  ];
+
+  return (
+    <div className="[ flex flex-col gap-5 ]">
+      {cardProps.map((card) => (
+        <>
+          <div className="[ flex items-center gap-2 px-2 ]">
+            <span className="font-medium">{card.cleaningDays}</span>
+            <h6 className="[ px-1.5 py-0.5 rounded-full border border-zinc-200 ]">
+              {card.cleaningTime}
+            </h6>
+          </div>
+          <div
+            key={card.title}
+            className="[ w-full overflow-hidden border rounded-lg border-zinc-200 ]"
+          >
+            <div className="[ py-4 px-5 bg-white ]">
+              <h6>{card.title}</h6>
+            </div>
+            <div>
+              <div>
+                {card.cleaner.map((cleaner) => (
+                  <button
+                    key={cleaner.name}
+                    className="[ flex items-center gap-2 ] [ w-full px-5 py-5 ] [ text-left border-t bg-zinc-50 hover:bg-zinc-200 ] "
+                  >
+                    <div className="w-8 h-8 rounded-full border border-zinc-300 flex items-center justify-center bg-zinc-200">
+                      MM
+                    </div>
+                    <div className="[ flex flex-col gap-0.5 w-full ]">
+                      <span className="w-64">{cleaner.name}</span>
+                      <span>{cleaner.phone}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </>
+      ))}
+    </div>
+  );
+}
