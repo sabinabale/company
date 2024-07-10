@@ -39,19 +39,16 @@ export default function CleanersCard() {
   };
 
   return (
-    <div className="[ flex flex-col gap-5 ]">
+    <>
       {cardProps.map((card) => (
-        <>
-          <div className="[ flex items-center gap-2 px-2 ]">
+        <div key={card.title} className="mb-8">
+          <div className="[ flex items-center gap-2 px-2 mb-4 ]">
             <span className="font-medium">{card.cleaningDays}</span>
             <h6 className="[ px-1.5 py-0.5 rounded-full border border-zinc-200 ]">
               {card.cleaningTime}
             </h6>
           </div>
-          <div
-            key={card.title}
-            className="[ w-full overflow-hidden border rounded-lg border-zinc-200 ]"
-          >
+          <div className="[ w-full overflow-hidden border rounded-lg border-zinc-200 ]">
             <div className="[ py-4 px-5 bg-white ]">
               <h6>{card.title}</h6>
             </div>
@@ -74,8 +71,8 @@ export default function CleanersCard() {
               </div>
             </div>
           </div>
-        </>
+        </div>
       ))}
-    </div>
+    </>
   );
 }
