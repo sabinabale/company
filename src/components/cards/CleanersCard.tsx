@@ -28,7 +28,7 @@ export default function CleanersCard() {
     },
   ];
 
-  const getInitials = (name) => {
+  const getInitials = (name: string) => {
     const nameParts = name.split(" ");
     if (nameParts.length >= 2) {
       return nameParts[0][0] + nameParts[1][0];
