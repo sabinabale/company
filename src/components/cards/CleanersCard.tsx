@@ -1,4 +1,4 @@
-export default function CleanerCard() {
+export default function CleanersCard() {
   const cardProps = [
     {
       title: "CONTACT INFORMATION",
@@ -28,6 +28,16 @@ export default function CleanerCard() {
     },
   ];
 
+  const getInitials = (name) => {
+    const nameParts = name.split(" ");
+    if (nameParts.length >= 2) {
+      return nameParts[0][0] + nameParts[1][0];
+    } else if (nameParts.length === 1) {
+      return nameParts[0][0];
+    }
+    return "";
+  };
+
   return (
     <div className="[ flex flex-col gap-5 ]">
       {cardProps.map((card) => (
@@ -50,14 +60,14 @@ export default function CleanerCard() {
                 {card.cleaner.map((cleaner) => (
                   <button
                     key={cleaner.name}
-                    className="[ flex items-center gap-2 ] [ w-full px-5 py-5 ] [ text-left border-t bg-zinc-50 hover:bg-zinc-200 ] "
+                    className="[ flex items-center gap-2.5 ] [ w-full px-5 py-5 ] [ text-left border-t bg-zinc-50 hover:bg-zinc-200 ] "
                   >
                     <div className="w-8 h-8 rounded-full border border-zinc-300 flex items-center justify-center bg-zinc-200">
-                      MM
+                      {getInitials(cleaner.name)}
                     </div>
                     <div className="[ flex flex-col gap-0.5 w-full ]">
                       <span className="w-64">{cleaner.name}</span>
-                      <span>{cleaner.phone}</span>
+                      <span className="text-[#57534F]">{cleaner.phone}</span>
                     </div>
                   </button>
                 ))}
