@@ -58,7 +58,7 @@ const ClientDetails = ({ isEditing }) => {
           autoCorrect="off"
           value={companyName}
           onChange={(e) => setCompanyName(e.target.value)}
-          className={`w-full mt-3 mb-[32px] text-[#57534F] border rounded-lg ${
+          className={`w-full mb-4 border rounded-lg ${
             isEditing ? "border-amber-500" : "border-transparent"
           }`}
         />

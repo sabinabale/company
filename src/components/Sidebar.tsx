@@ -81,25 +81,6 @@ const Security = () => {
   );
 };
 
-// const NotesCard = () => {
-//   const notes = [
-//     { text: "Coffee capsules collected from 5th floor" },
-//     { text: "Throw away expired food every Friday" },
-//   ];
-
-//   return (
-//     <div className="py-5 px-[22px] text-zinc-600">
-//       <h6 className="mb-5">NOTES</h6>
-//       <div className="flex flex-col gap-3">
-//         {notes.map((note, index) => (
-//           <div key={index}>{note.text}</div>
-//         ))}
-//       </div>
-//       <button className="mt-5 opacity-70 hover:text-black">+ add note</button>
-//     </div>
-//   );
-// };
-
 const NotesCard = () => {
   const [notes, setNotes] = useState([
     { text: "Coffee capsules collected from 5th floor" },
