@@ -1,5 +1,7 @@
+import React from "react";
+
 type TabHeadingProps = {
-  children?: string;
+  children?: React.ReactNode;
 };
 
 export default function TabHeading({ children }: TabHeadingProps) {

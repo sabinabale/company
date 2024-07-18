@@ -31,7 +31,7 @@ function NavLinks() {
     {
       svg: (
         <Image
-          width={17}
+          width={16}
           height={17}
           src={buildingsIcon.src}
           alt="buildingsIcon"

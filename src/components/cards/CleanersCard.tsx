@@ -1,7 +1,6 @@
 export default function CleanersCard() {
   const cardProps = [
     {
-      title: "CONTACT INFORMATION",
       cleaningDays: "Mon - Fri",
       cleaningTime: "8PM - 9PM",
       cleaner: [
@@ -16,7 +15,6 @@ export default function CleanersCard() {
       ],
     },
     {
-      title: "CONTACT INFORMATION",
       cleaningDays: "Sat - Sun",
       cleaningTime: "8PM - 9PM",
       cleaner: [
@@ -40,8 +38,8 @@ export default function CleanersCard() {
 
   return (
     <>
-      {cardProps.map((card) => (
-        <div key={card.title} className="mb-8">
+      {cardProps.map((card, index) => (
+        <div key={index} className="mb-8">
           <div className="[ flex items-center gap-2 px-2 mb-4 ]">
             <span className="font-medium">{card.cleaningDays}</span>
             <h6 className="[ px-1.5 py-0.5 rounded-full border border-zinc-200 ]">
@@ -50,7 +48,7 @@ export default function CleanersCard() {
           </div>
           <div className="[ w-full overflow-hidden border rounded-lg border-zinc-200 ]">
             <div className="[ py-4 px-5 bg-white ]">
-              <h6>{card.title}</h6>
+              <h6>CONTACT INFORMATION</h6>
             </div>
             <div>
               <div>

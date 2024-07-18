@@ -56,10 +56,6 @@ body {
   margin-top: 1.5rem;
 }
 
-input {
-  all: unset;
-}
-
 form,
 .btn--primary,
 .btn--secondary {
@@ -197,6 +193,7 @@ h6 {
   font-weight: 500;
   color: var(--neutral_60);
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .p13 {

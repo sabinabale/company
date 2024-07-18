@@ -6,7 +6,7 @@ export default function CleaningSchedules() {
   return (
     <div>
       <div className="flex items-center justify-between mb-8 px-2">
-        <h4 className="">Cleaning Schedules</h4>
+        <h4>Cleaning Schedules</h4>
         <AddScheduleButton />
       </div>
       <CleanersCard />
