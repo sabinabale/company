@@ -93,12 +93,13 @@ const NotesCard = () => {
     if (newNote.trim() !== "") {
       setNotes([...notes, { text: newNote }]);
       setNewNote("");
-      setShowInputField(false);
     }
+    // Hide the input field and save button whether or not note was added
+    setShowInputField(false);
   };
 
   return (
-    <div className="py-5 px-[22px] text-zinc-600">
+    <div className="py-5 px-[22px] ">
       <h6 className="mb-5">NOTES</h6>
       <div className="flex flex-col gap-3">
         {notes.map((note, index) => (
@@ -108,26 +109,28 @@ const NotesCard = () => {
       {showInputField && (
         <div className="mt-3 flex gap-2">
           <input
-            className="p-2 border border-gray-300"
+            className="p-2 border rounded-lg border-gray-300 placeholder:text-[12px] placeholder:opacity-80 focus:outline-none focus:border-amber-500"
             type="text"
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
-            placeholder="Enter your note"
+            placeholder="Write your note here"
           />
           <button
-            className="p-2 bg-green-500 text-white"
+            className="p-2 btn--primary custom-border"
             onClick={handleAddNote}
           >
             Save
           </button>
         </div>
       )}
-      <button
-        className="mt-5 opacity-50 text-black hover:opacity-100"
-        onClick={() => setShowInputField(true)}
-      >
-        + add note
-      </button>
+      {!showInputField && (
+        <button
+          className="mt-5 opacity-50 text-black hover:opacity-100"
+          onClick={() => setShowInputField(true)}
+        >
+          + add note
+        </button>
+      )}
     </div>
   );
 };
