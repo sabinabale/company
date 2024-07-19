@@ -6,7 +6,7 @@ import ContactCard from "./cards/ContactCard";
 
 export default function Sidebar() {
   return (
-    <div className="w-[320px] h-screen bg-white border-l">
+    <div className="w-[330px] h-screen bg-white border-l">
       <RubbishProcedure />
       <Security />
       <ContactCard />
@@ -94,7 +94,7 @@ const NotesCard = () => {
       setNotes([...notes, { text: newNote }]);
       setNewNote("");
     }
-    // Hide the input field and save button whether or not note was added
+
     setShowInputField(false);
   };
 
