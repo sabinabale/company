@@ -1,3 +1,15 @@
+Hi, this is a mock version of an app for a cleaning company that I am working on. The full app should have a database of clients, cleaners and cleaning schedules, orders, invoices, order creation and a duty log.
+
+Stack for this project:
+
+Next.js
+Prisma (PostgreSQL + Vercel)
+Tailwind
+
+Currently working on the UI.
+
+---------------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
