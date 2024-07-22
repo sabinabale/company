@@ -4,7 +4,7 @@ Stack for this project:
 
 Next.js | Prisma (PostgreSQL + Vercel) | Tailwind
 
-Currently working on the UI. Link: company-ggw6vh5ck-sabinabales-projects.vercel.app
+Currently working on the UI. Link: [`here`](https://company-ggw6vh5ck-sabinabales-projects.vercel.app)
 
 ---------------------------------
 
