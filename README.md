@@ -2,9 +2,7 @@ Hi, this is a mock version of an app for a cleaning company that I am working on
 
 Stack for this project:
 
-Next.js
-Prisma (PostgreSQL + Vercel)
-Tailwind
+Next.js | Prisma (PostgreSQL + Vercel) | Tailwind
 
 Currently working on the UI.
 
