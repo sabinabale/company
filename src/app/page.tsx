@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
@@ -6,7 +5,7 @@ import loginpic from "/public/login.png";
 
 export default function Page() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <>
       <h1 className="text-[22px] font-bold mb-5">
         Company
         <span className="w-2 h-2 bg-amber-400 rounded-full ml-1 border-[2px] border-black/5"></span>
@@ -18,6 +17,7 @@ export default function Page() {
           height={92}
           alt="login backgroubd picture"
           className="absolute top-0 left-0"
+          priority={true}
         ></Image>
         <h4 className="text-center mt-[34px]">Log into your account</h4>
         <p className=" text-[#78716C] text-center mb-11 mt-2">
@@ -25,7 +25,7 @@ export default function Page() {
         </p>
         <label htmlFor="email">E-mail</label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="Enter email address"
@@ -42,16 +42,16 @@ export default function Page() {
           className="input"
         />
         <div className="flex gap-4 mt-2">
-          <Button variant="primary" type="submit" className="w-full">
-            <Link className="outline-none" href="/app/clients">
+          <Link className="outline-none w-full" href="/app/clients">
+            <Button variant="primary" type="submit" className="w-full">
               Log in
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </form>
       <small className="mt-4 text-[#A8A29D]">
         All rights reserved © {new Date().getFullYear()}
       </small>
-    </div>
+    </>
   );
 }

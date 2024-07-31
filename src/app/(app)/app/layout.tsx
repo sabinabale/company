@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "All you need in one place",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;

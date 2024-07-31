@@ -3,9 +3,7 @@ import Searchbar from "@/components/Searchbar";
 import TabHeading from "@/components/TabHeading";
 import AddClientButton from "@/components/buttons/AddClientButton";
 import Container from "@/layout/Container";
-
 import Header from "@/layout/Header";
-import React from "react";
 
 export default function Page() {
   return (
