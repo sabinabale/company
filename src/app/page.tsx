@@ -40,7 +40,9 @@ export default function Page() {
         />
         <div className="flex gap-4 mt-2">
           <Button variant="primary" type="submit" className="w-full">
-            <Link href="/app/clients">Log in</Link>
+            <Link className="outline-none" href="/app/clients">
+              Log in
+            </Link>
           </Button>
         </div>
       </form>
