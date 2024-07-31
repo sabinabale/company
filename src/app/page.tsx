@@ -7,7 +7,10 @@ import loginpic from "/public/login.png";
 export default function Page() {
   return (
     <div className="h-screen flex flex-col items-center justify-center">
-      <h1 className="text-[22px] font-bold mb-5">Company</h1>
+      <h1 className="text-[22px] font-bold mb-5">
+        Company
+        <span className="w-2 h-2 bg-amber-400 rounded-full ml-1 border-[2px] border-black/5"></span>
+      </h1>
       <form className="relative flex flex-col w-[360px] h-auto border rounded-[15px] p-5 bg-white">
         <Image
           src={loginpic.src}
@@ -17,7 +20,7 @@ export default function Page() {
           className="absolute top-0 left-0"
         ></Image>
         <h4 className="text-center mt-[34px]">Log into your account</h4>
-        <p className=" text-zinc-500 text-center mb-11 mt-2">
+        <p className=" text-[#78716C] text-center mb-11 mt-2">
           Welcome back! Please enter your details.
         </p>
         <label htmlFor="email">E-mail</label>
@@ -46,7 +49,7 @@ export default function Page() {
           </Button>
         </div>
       </form>
-      <small className="mt-4 text-zinc-400">
+      <small className="mt-4 text-[#A8A29D]">
         All rights reserved © {new Date().getFullYear()}
       </small>
     </div>
