@@ -1,7 +1,7 @@
 export default function ListItem() {
   return (
     <a
-      href="/clients/client-details"
+      href="/client-details"
       className="w-full border-t-[0.5px] border-t-zinc-200 group py-3 px-5 flex items-center justify-between hover:bg-zinc-100"
     >
       <div className="flex gap-3 items-center">
