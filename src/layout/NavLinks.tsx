@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import alertIconRegular from "/public/alertIconRegular.svg";
 import basketIcon from "/public/basketIcon.svg";
 import buildingsIcon from "/public/buildingsIcon.svg";
+import Link from "next/link";
 
 export default function NavLinks() {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function NavLinks() {
         />
       ),
       text: "Clients",
-      href: "/clients",
+      href: "/app/clients",
     },
     {
       svg: (
@@ -31,7 +32,7 @@ export default function NavLinks() {
         />
       ),
       text: "Duty log",
-      href: "/dutylog",
+      href: "/app/dutylog",
     },
 
     {
@@ -39,14 +40,14 @@ export default function NavLinks() {
         <Image width={17} height={17} src={basketIcon.src} alt="basketIcon" />
       ),
       text: "Orders",
-      href: "/orders",
+      href: "/app/orders",
     },
   ];
 
   return (
     <div className="flex gap-2">
       {navLinks.map((link) => (
-        <a
+        <Link
           href={link.href}
           key={link.text}
           className={`[ flex ] [ btn--padding font-medium ] [ custom-border ] ${
@@ -59,7 +60,7 @@ export default function NavLinks() {
             <span>{link.svg}</span>
             <span>{link.text}</span>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );
