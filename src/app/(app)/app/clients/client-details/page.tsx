@@ -20,7 +20,7 @@ export default function Page() {
       <div className="w-full">
         <div className="[ flex items-center justify-between ] [ px-5 pt-2 mb-11 ]">
           <div className="[ flex items-center gap-2.5 ] [ text-[13px] pl-2 ]">
-            <a href="/clients">Clients</a>
+            <a href="/app/clients">Clients</a>
             <Image
               className="[ opacity-60 ]"
               width={16}
