@@ -37,6 +37,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             </div>
             <TabHeading>
               <input
+                disabled
                 autoCorrect="off"
                 value={company.name}
                 className={`w-full mb-4 border rounded-lg border-transparent
@@ -44,6 +45,7 @@ export default async function Page({ params }: { params: { id: string } }) {
               />
             </TabHeading>
             <input
+              disabled
               autoCorrect="off"
               value={company.address}
               className={`w-full mb-[32px] py-0.5 text-[#57534F] border rounded-md border-transparent
