@@ -29,19 +29,20 @@ model User {
 }
 
 model Client {
-  id                String   @id @default(cuid())
-  name              String
-  address           String
-  rubbishProvider   String
-  rubbishCollection String?
-  entry             String
-  alarmCode         String?
-  notes             String?
-  clientSince       DateTime
-  manager           User     @relation(fields: [userId], references: [id])
-  supplyingProducts Boolean
-  suppliesMargin    Int
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-  userId            String
+  id                     Int      @id @default(autoincrement())
+  name                   String
+  address                String
+  rubbishProvider        String
+  rubbishSacksSuppliedBy String
+  rubbishCollection      String?
+  entry                  String
+  alarmCode              String?
+  notes                  String?
+  clientSince            DateTime
+  manager                User     @relation(fields: [userId], references: [id])
+  supplyingProducts      Boolean
+  suppliesMargin         Int
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  userId                 String
 }

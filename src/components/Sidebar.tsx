@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
-import React, { useState } from "react";
+
 import firstmile from "/public/firstmile.svg";
 import securityRounded from "/public/securityRounded.svg";
 import ContactCard from "./cards/ContactCard";
+import { useState } from "react";
 
 export default function Sidebar() {
   return (

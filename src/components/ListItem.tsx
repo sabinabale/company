@@ -1,17 +1,16 @@
-export default function ListItem() {
+import Link from "next/link";
+
+export default function ListItem({ children }) {
   return (
-    <a
-      href="/app/clients/client-details"
-      className="w-full border-t-[0.5px] border-t-zinc-200 group py-3 px-5 flex items-center justify-between hover:bg-zinc-100"
-    >
+    <div className="w-full border-t-[0.5px] border-t-zinc-200 group py-3 px-5 flex items-center justify-between hover:bg-zinc-100">
       <div className="flex gap-3 items-center">
         <div className="[ w-[25px] h-[25px] ] [ flex items-center justify-center ] [ rounded-lg border border-[#E7E5E4] bg-amber-500 ] ">
           A
         </div>
-        <div className="[ font-medium neutral-100 ]">Company name</div>
+        <div className="[ font-medium neutral-100 ]">{children}</div>
       </div>
       <button className="rounded-md p-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out hover:bg-zinc-200">
-        <svg
+        {/* <svg
           width="16"
           height="16"
           viewBox="0 0 16 16"
@@ -39,8 +38,8 @@ export default function ListItem() {
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-        </svg>
+        </svg> */}
       </button>
-    </a>
+    </div>
   );
 }
