@@ -4,7 +4,7 @@ import prisma from "@/lib/db";
 
 import Container from "@/layout/Container";
 import CleaningSchedules from "@/components/cards/CleaningSchedules";
-import TabHeading from "@/components/TabHeading";
+import H1 from "@/components/H1";
 import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
 
@@ -35,22 +35,12 @@ export default async function Page({ params }: { params: { id: string } }) {
             <div className="[ w-[34px] h-[34px] ] [ flex items-center justify-center ] [ mb-4 font-medium text-[19px] rounded-[11px] border border-[#E7E5E4] bg-amber-500 ] ">
               A
             </div>
-            <TabHeading>
-              <input
-                disabled
-                autoCorrect="off"
-                value={company.name}
-                className={`w-full mb-4 border rounded-lg border-transparent
-          }`}
-              />
-            </TabHeading>
-            <input
-              disabled
-              autoCorrect="off"
-              value={company.address}
-              className={`w-full mb-[32px] py-0.5 text-[#57534F] border rounded-md border-transparent
-      }`}
-            />
+            <H1>
+              <div className="w-full my-4">{company.name}</div>
+            </H1>
+            <div className="w-full mb-[32px] py-0.5 text-[#57534F]">
+              {company.address}
+            </div>
 
             <Tabs />
             <CleaningSchedules />

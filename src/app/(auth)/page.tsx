@@ -41,7 +41,7 @@ export default function Page() {
           <div className="flex gap-4 mt-2">
             <Link className="outline-none w-full" href="/app/clients">
               <Button variant="primary" type="submit" className="w-full">
-                Log in
+                Log in (click me)
               </Button>
             </Link>
           </div>
